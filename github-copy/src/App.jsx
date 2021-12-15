@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import axios from 'axios';
 import {GlobalStyle, Main} from "./styles";
 import Header from "./components/header";
@@ -14,11 +15,14 @@ const App = () => {
   useEffect( () => {
     const loadRepos = async () => {
       try {
-        const response = await axios.get()
+        const response = await axios.get('https://api.github.com/users/helios63/repos?per_page=100')
+        setRepos(response.data)
+        setResults(response.data)
       } catch {
         console.log('NO FUNCIONA')
       }
     }
+    loadRepos();
   }, [])
 
   return (
@@ -27,7 +31,7 @@ const App = () => {
     <Header />
     <Main>
       <Profile />
-      <Interface />
+      <Interface text={text} repos={repos} results={results} setResults={setResults} setText={setText} />
     </ Main>
     </>
   );
