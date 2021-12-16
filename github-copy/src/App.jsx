@@ -5,6 +5,7 @@ import {GlobalStyle, Main} from "./styles";
 import Header from "./components/header";
 import Profile from "./components/profile";
 import Interface from "./components/interface";
+import Footer from "./components/footer";
 
 const App = () => {
 
@@ -33,6 +34,7 @@ const App = () => {
       <Profile />
       <Interface text={text} repos={repos} results={results} setResults={setResults} setText={setText} />
     </ Main>
+    <Footer />
     </>
   );
 }
