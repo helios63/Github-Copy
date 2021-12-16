@@ -4,7 +4,7 @@ export const Interface = styled.div`
   width:100%;
   background-color: var(--background);
   border-radius: 15px;
-
+  margin-right:1em;
 `
 
 export const Tabs = styled.div`
@@ -59,4 +59,10 @@ export const Result = styled.div`
   display:flex;
   justify-content: space-between;
   align-items:center;
+`
+export const Title = styled.a`
+  font-size:24px;
+  font-weight:bold;
+  color: var(--orange);
+
 `

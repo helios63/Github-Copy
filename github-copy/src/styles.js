@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
     height: 100vh;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }
@@ -79,7 +79,7 @@ export const GlobalStyle = createGlobalStyle`
 `
 export const Main = styled.main`
   width: 100%;
-  padding: 1em;
+  padding: 1em 2em 1em 1em;
   display:grid;
   grid-template-columns: 260px auto;
   gap: 1em;

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from '../profile/styles'
-import { Interface, Tabs, Link, LinkActive, SearchBar, ButtonNew, Status, Result} from './styles'
+import { Interface, Tabs, Link, LinkActive, SearchBar, ButtonNew, Status, Result, Title} from './styles'
 import square from "./square.png";
 
 
@@ -74,15 +74,15 @@ const InterfaceComponent = (props) => {
       <Result key={index}>
           <div>
             <div className="flex items-center">
-              <h2>{result.name}</h2>
+            <h2><Title href="#">{result.name}</Title></h2>
               <Status>{result.private ? "Private" : "Public" }</Status>
             </div>
           <p className="text-base">{result.description}</p>
             <div className="flex mt-2">
               <div>
-                <div className="flex mr-4"><img className="object-contain" src={square}/>Javascript</div>
+                <div className="flex mr-4 text-sm"><img className="object-contain mr-2" src={square}/>Javascript</div>
               </div>
-              <div className="text-sm">Updated 3 weeks ago</div>
+              <div className="text-sm">Last push: {result.pushed_at}</div>
             </div>
           </div>
           <div><Button>Star</Button></div>
