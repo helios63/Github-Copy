@@ -1,31 +1,25 @@
-import React from 'react'
-import { Button } from '../profile/styles'
-import { Interface, Tabs, Link, LinkActive, SearchBar, ButtonNew, Status, Result, Title} from './styles'
+import React from 'react';
+import { Button } from '../profile/styles';
+import { Interface, Tabs, Link, LinkActive, SearchBar, ButtonNew, Status, Result, Title } from './styles';
 import square from "./square.png";
 
 
 const InterfaceComponent = (props) => {
-
-  // When typing into searchbar...
-  const onChangeHandler = (text) => {
-    let matches = [];
-
-    // For at least 2 characters
-    if (text.length > 1 ) {
-      matches = props.repos.filter( repo => {
-        const regex = new RegExp(`${text}`, "gi");
-        return repo.name.match(regex)
-      })
-    } else {
-      matches = props.repos
-    }
-
-    props.setResults(matches);
-    console.log(matches)
-    props.setText(text);
+  if (text.length > 1) {
+    matches = props.repos.filter(repo => {
+      const regex = new RegExp(`${text}`, "gi");
+      return repo.name.match(regex);
+    })
+  } else {
+    // When input is empty or less that 2 chars, show all repos
+    matches = props.repos;
   }
 
-  return (
+  props.setResults(matches);
+  props.setText(text);
+}
+
+return (
   <Interface>
     <Tabs>
       <Link href="#">Overview</Link>
@@ -38,14 +32,14 @@ const InterfaceComponent = (props) => {
       <div>
         <form action="#">
           <input
-          name="search"
-          type="text"
-          placeholder='Find a Repository...'
-          autoComplete="off"
-          value={props.text}
-          onChange={ event => onChangeHandler(event.target.value)}
-          className="w-full mr-0 mb-2 sm:w-auto sm:mr-2 sm:mb-0"
-           />
+            name="search"
+            type="text"
+            placeholder="Find a Repository..."
+            autoComplete="off"
+            value={props.text}
+            onChange={(event) => onChangeHandler(event.target.value)}
+            className="w-full mr-0 mb-2 sm:w-auto sm:mr-2 sm:mb-0"
+          />
           <select name="types" id="type" className="mr-2">
             <option value="javascript">Type: All</option>
             <option value="javascript">JavaScript</option>
@@ -73,27 +67,38 @@ const InterfaceComponent = (props) => {
       <ButtonNew>New</ButtonNew>
     </SearchBar>
 
-    {/* Iteraction over all results */}
-    { props.results.length > 0 ? props.results.map((result, index) =>
-      <Result key={index}>
+    {/* Iteration over all results */}
+    {props.results.length > 0 ? (
+      props.results.map((result, index) => (
+        <Result key={index}>
           <div>
             <div className="flex items-center">
-            <h2><Title href="#">{result.name}</Title></h2>
-              <Status>{result.private ? "Private" : "Public" }</Status>
+              <h2>
+                <Title href="#">{result.name}</Title>
+              </h2>
+              <Status>{result.private ? "Private" : "Public"}</Status>
             </div>
-          <p className="text-base">{result.description}</p>
+            <p className="text-base">{result.description}</p>
             <div className="flex mt-2">
               <div>
-                <div className="flex mr-4 text-sm"><img className="object-contain mr-2" src={square}/>Javascript</div>
+                <div className="flex mr-4 text-sm">
+                  <img className="object-contain mr-2" src={square} alt="square" />
+                  <span>Javascript</span>
+                </div>
               </div>
               <div className="text-sm">Last push: {result.pushed_at}</div>
             </div>
           </div>
-          <div><Button>Star</Button></div>
-      </Result>
-    ) : <p className="ml-4">Sorry! There is no results. </p>}
+          <div>
+            <Button>Star</Button>
+          </div>
+        </Result>
+      ))
+    ) : (
+      <p className="ml-4">Sorry! There are no results "{props.text}".</p>
+    )}
   </Interface>
-  )
+);
 }
 
 export default InterfaceComponent
