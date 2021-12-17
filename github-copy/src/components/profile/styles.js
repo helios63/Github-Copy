@@ -44,3 +44,16 @@ export const Button = styled.button`
 export const Links = styled.div`
   display:flex;
 `
+
+
+export const Link = styled.div`
+  display: flex;
+  margin-bottom: 0.5em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  img {
+    width: 8px;
+    @apply object-contain mr-3;
+  }
+`

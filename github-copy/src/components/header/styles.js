@@ -11,10 +11,10 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em 1em 1em;
+  padding: 1em;
 
   @media (max-width: 650px) {
-    padding: 0.5em 1em 0.5em 0.5em;
+    padding: 0.5em;
   }
 `
 

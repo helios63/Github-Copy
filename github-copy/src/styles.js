@@ -1,3 +1,4 @@
+import { createGlobalStyle } from 'styled-components'
 import styled from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
@@ -8,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     --orange: #E55325;
     --gris2: #7C7C7C;
   }
+
   body {
     background-color: #fff;
     color: var(--black);
@@ -23,6 +25,7 @@ export const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }
+
   a {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
@@ -33,19 +36,23 @@ export const GlobalStyle = createGlobalStyle`
     color: var(--gris2);
     transition: color 0.8s ease-in-out;
   }
+
   a:hover {
     color: var(--black);
   }
+
   input, select {
     padding: 0.5em;
     border-radius: 4px;
     border: 1px solid var(--gris);
     font-size: 14px;
   }
+
   select {
     max-width: 90px;
     padding: 0.5em 0;
   }
+
   h2 {
     font-family: 'Lato', sans-serif;
     font-size: 26px;
@@ -54,6 +61,7 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 31px;
     color: var(--black);
   }
+
   h3 {
     font-family: 'Lato', sans-serif;
     font-size: 20px;
@@ -62,6 +70,7 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 24px;
     color: var(--black);
   }
+
   p {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
@@ -71,27 +80,34 @@ export const GlobalStyle = createGlobalStyle`
     color: var(--black);
     padding: 1.5em 0;
   }
+
   @media (max-width: 850px) {
     body {
       font-size: 14px;
     }
+
     a {
       font-size: 14px;
     }
+
     input, select {
       font-size: 12px;
     }
+
     h2 {
       font-size: 22px;
     }
+
     h3 {
       font-size: 14px;
     }
+
     p {
       font-size: 14px;
       padding: 0.8em 0;
     }
   }
+
   @media (max-width: 360px) {
     a {
       font-size: 13px;
@@ -105,12 +121,15 @@ export const Main = styled.main`
   display: grid;
   grid-template-columns: 260px auto;
   gap: 1em;
+
   @media (max-width: 850px) {
     padding: 0.5em;
     grid-template-columns: 180px auto;
     gap: 0.5em;
   }
+
   @media (max-width: 650px) {
     padding: 0.5em 0 0 0 ;
     grid-template-columns: 1fr;
   }
+`
