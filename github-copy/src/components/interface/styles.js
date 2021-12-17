@@ -18,6 +18,7 @@ export const Interface = styled.div`
 export const Tabs = styled.div`
   width: 100%;
   display:flex;
+  flex-wrap: wrap;
   border-bottom: 1px solid var(--gris);
   padding: 0.5em 1em 0;
 

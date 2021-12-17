@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const Footer = styled.div`
-  width:100%;
+  width: 100%;
   display: flex;
-  justify-content:space-between;
-  align-items:flex-start;
+  justify-content: space-between;
+  align-items: center;
   border-top: 1px solid var(--gris);
   padding: 1em 3em 1em 1em;
   margin: 2em 0;
