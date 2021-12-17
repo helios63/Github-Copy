@@ -8,6 +8,13 @@ export const ProfileBlock = styled.div`
     display:grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5em;
+    padding: 0 1.5em 0 0.5em;
+  }
+
+  @media (max-width: 360px) {
+    display: flex;
+    flex-direction:column;
+    padding: 0 0.5em 1em 0.5em;
   }
 `
 
@@ -15,6 +22,10 @@ export const Avatar = styled.img`
   width: 100%;
   object-fit: cover;
   border-radius:15px;
+
+  @media (max-width: 360px) {
+    height: 150px;
+  }
 `
 export const Button = styled.button`
   width: 100%;

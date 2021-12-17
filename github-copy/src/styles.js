@@ -86,7 +86,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
       font-size:14px;
     }
-    a{
+    a {
       font-size:14px;
     }
     input, select {
@@ -101,6 +101,12 @@ export const GlobalStyle = createGlobalStyle`
     p {
       font-size:14px;
       padding: 0.8em 0;
+    }
+  }
+
+  @media (max-width: 360px) {
+    a {
+      font-size:13px;
     }
   }
 
@@ -119,7 +125,7 @@ export const Main = styled.main`
     }
 
     @media (max-width: 650px) {
-      padding: 0.5em 1em 0.5em 0.5em;
+      padding: 0.5em 0 0 0 ;
       grid-template-columns: 1fr;
     }
 `

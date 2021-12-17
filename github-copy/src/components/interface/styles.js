@@ -5,6 +5,14 @@ export const Interface = styled.div`
   background-color: var(--background);
   border-radius: 15px;
   margin-right:1em;
+
+  @media (max-width: 650px) {
+    padding: 0 1.5em 0 0;
+  }
+
+  @media (max-width: 360px) {
+  border-radius: 0;
+  }
 `
 
 export const Tabs = styled.div`
@@ -13,11 +21,18 @@ export const Tabs = styled.div`
   border-bottom: 1px solid var(--gris);
   padding: 0.5em 1em 0;
 
+  @media (max-width: 650px) {
+    padding: 0.5em 0.5em 0 0.5em;
+  }
 `
 
 export const Link = styled.a`
   padding: 0.5em 0;
   margin: 0 0.5em;
+
+  @media (max-width: 650px) {
+    padding: 0;
+  }
 `
 
 export const LinkActive = styled.a`
@@ -26,6 +41,10 @@ export const LinkActive = styled.a`
   border-bottom: 3px solid var(--orange);
   padding: 0.5em 0;
   margin: 0 0.5em;
+
+  @media (max-width: 650px) {
+    padding: 0 0 0.5em 0;
+  }
 `
 
 export const SearchBar = styled.div`
@@ -53,6 +72,7 @@ export const ButtonNew = styled.button`
 
   @media (max-width: 650px) {
     margin-top:0.5em;
+    padding:0.5em;
   }
 `
 
@@ -63,6 +83,10 @@ export const Status = styled.div`
   font-size: 14px;
   color: var(--gris2);
   margin-left: 1em;
+
+  @media (max-width: 650px) {
+    margin-left: 0.5em;
+  }
 `
 
 export const Result = styled.div`
