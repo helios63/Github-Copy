@@ -6,7 +6,7 @@ export const Footer = styled.div`
   justify-content:space-between;
   align-items:flex-start;
   border-top: 1px solid var(--gris);
-  padding: 1em 2em 1em 1em;
+  padding: 1em 3em 1em 1em;
   margin: 2em 0;
 
   font-family: Lato;

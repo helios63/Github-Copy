@@ -30,7 +30,6 @@ export const LinkActive = styled.a`
 export const SearchBar = styled.div`
   width: 100%;
   display:flex;
-  border-bottom: 1px solid var(--gris);
   padding: 1em 1em;
 `
 
@@ -55,7 +54,7 @@ export const Status = styled.div`
 export const Result = styled.div`
   width:100%;
   padding: 2em;
-  border-bottom: 1px solid var(--gris);
+  border-top: 1px solid var(--gris);
   display:flex;
   justify-content: space-between;
   align-items:center;
