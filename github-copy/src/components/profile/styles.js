@@ -2,6 +2,13 @@ import styled from 'styled-components'
 
 export const ProfileBlock = styled.div`
   max-width: 260px;
+
+  @media (max-width: 650px) {
+    max-width:100%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+  }
 `
 
 export const Avatar = styled.img`
@@ -17,6 +24,10 @@ export const Button = styled.button`
   color: var(--orange);
   font-size: 14px;
   padding: 0.5em 1em;
+
+  @media (max-width: 650px) {
+    padding: 0.5em;
+  }
 `
 
 export const Links = styled.div`

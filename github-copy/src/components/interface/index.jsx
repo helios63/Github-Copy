@@ -42,7 +42,7 @@ const InterfaceComponent = (props) => {
           autoComplete="off"
           value={props.text}
           onChange={ event => onChangeHandler(event.target.value)}
-          className="mr-2"
+          className="w-full mr-0 mb-2 sm:w-auto sm:mr-2 sm:mb-0"
            />
           <select name="types" id="type" className="mr-2">
             <option value="javascript">Type: All</option>

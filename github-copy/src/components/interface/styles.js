@@ -12,6 +12,7 @@ export const Tabs = styled.div`
   display:flex;
   border-bottom: 1px solid var(--gris);
   padding: 0.5em 1em 0;
+
 `
 
 export const Link = styled.a`
@@ -30,7 +31,16 @@ export const LinkActive = styled.a`
 export const SearchBar = styled.div`
   width: 100%;
   display:flex;
-  padding: 1em 1em;
+  padding: 1em;
+
+  @media (max-width: 850px) {
+    padding: 0.5em;
+  }
+
+  @media (max-width: 650px) {
+    flex-direction:column;
+  }
+
 `
 
 export const ButtonNew = styled.button`
@@ -40,6 +50,10 @@ export const ButtonNew = styled.button`
   font-size: 14px;
   font-weight:bold;
   padding: 0.5em 1em;
+
+  @media (max-width: 650px) {
+    margin-top:0.5em;
+  }
 `
 
 export const Status = styled.div`
@@ -58,6 +72,10 @@ export const Result = styled.div`
   display:flex;
   justify-content: space-between;
   align-items:center;
+
+  @media (max-width:850px) {
+    padding:1em;
+  }
 `
 export const Title = styled.a`
   font-size:24px;

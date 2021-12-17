@@ -19,4 +19,7 @@ export const Footer = styled.div`
   text-align: right;
   text-transform: uppercase;
 
+  @media (max-width: 650px) {
+    padding: 0.5em;
+  }
 `

@@ -43,10 +43,15 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   input, select {
-    padding: 0.5em 0.8em;
+    padding: 0.5em;
     border-radius: 4px;
     border: 1px solid var(--gris);
     font-size: 14px;
+  }
+
+  select {
+    max-width:90px;
+    padding: 0.5em;
   }
 
   h2 {
@@ -76,6 +81,29 @@ export const GlobalStyle = createGlobalStyle`
     color: var(--black);
     padding: 1.5em 0;
   }
+
+  @media (max-width: 850px) {
+    body {
+      font-size:14px;
+    }
+    a{
+      font-size:14px;
+    }
+    input, select {
+      font-size: 12px;
+    }
+    h2 {
+      font-size: 22px;
+    }
+    h3 {
+      font-size: 14px;
+    }
+    p {
+      font-size:14px;
+      padding: 0.8em 0;
+    }
+  }
+
 `
 export const Main = styled.main`
   width: 100%;
@@ -83,4 +111,15 @@ export const Main = styled.main`
   display:grid;
   grid-template-columns: 260px auto;
   gap: 1em;
+
+    @media (max-width: 850px) {
+      padding: 0.5em 1.5em 0.5em 0.5em;
+      grid-template-columns: 180px auto;
+      gap: 0.5em;
+    }
+
+    @media (max-width: 650px) {
+      padding: 0.5em 1em 0.5em 0.5em;
+      grid-template-columns: 1fr;
+    }
 `

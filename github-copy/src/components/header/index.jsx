@@ -1,5 +1,5 @@
 import React from 'react'
-import {Header, Logo, Avatar, Nav} from './styles.js';
+import {Header, HeaderSearch, Logo, Avatar, Nav} from './styles.js';
 import logo from "./logo.png";
 import avatar from "./avatar.png";
 
@@ -7,7 +7,7 @@ const HeaderComponent = () => (
   <Header>
     <div className="flex items-center">
       <Logo src={logo} title="Logo Github" />
-      <input className="mr-4" type="text" name="search" placeholder='Search or jump to...'/>
+      <HeaderSearch className="mr-4" type="text" name="search" placeholder='Search or jump to...'/>
       <Nav>
         <a href="#">Pull Requests</a>
         <a href="#">Issues</a>
