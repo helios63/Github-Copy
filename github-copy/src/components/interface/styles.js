@@ -26,6 +26,30 @@ export const Tabs = styled.div`
   }
 `
 
+export const SearchBar = styled.div`
+  display:flex;
+  padding: 1em;
+
+  @media (max-width:650px) {
+    flex-direction: column;
+  }
+`
+
+export const ButtonNew = styled.button`
+  border-radius: 5px;
+  background: var(--orange);
+  color: #FFF;
+  font-size: 14px;
+  padding: 0.5em 1em;
+
+  @media (max-width: 650px) {
+    margin-top:0.5em;
+    padding: 0.5em;
+  }
+`
+
+
+
 export const Link = styled.a`
   padding: 0.5em 0;
   margin: 0 0.5em;
@@ -44,35 +68,6 @@ export const LinkActive = styled.a`
 
   @media (max-width: 650px) {
     padding: 0 0 0.5em 0;
-  }
-`
-
-export const SearchBar = styled.div`
-  width: 100%;
-  display:flex;
-  padding: 1em;
-
-  @media (max-width: 850px) {
-    padding: 0.5em;
-  }
-
-  @media (max-width: 650px) {
-    flex-direction:column;
-  }
-
-`
-
-export const ButtonNew = styled.button`
-  border-radius: 5px;
-  background: var(--orange);
-  color: #FFF;
-  font-size: 14px;
-  font-weight:bold;
-  padding: 0.5em 1em;
-
-  @media (max-width: 650px) {
-    margin-top:0.5em;
-    padding:0.5em;
   }
 `
 

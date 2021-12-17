@@ -87,7 +87,7 @@ const InterfaceComponent = (props) => {
           </div>
           <div><Button>Star</Button></div>
       </Result>
-    ) : <p className="ml-2 sm:ml-4">Sorry! There is no results. </p>}
+    ) : <p className="ml-2">Sorry! There is no results. </p>}
   </Interface>
   )
 }

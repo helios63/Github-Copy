@@ -20,7 +20,7 @@ const App = () => {
         setRepos(response.data)
         setResults(response.data)
       } catch {
-        console.log('NO FUNCIONA')
+        console.log('It doesnt work')
       }
     }
     loadRepos();
