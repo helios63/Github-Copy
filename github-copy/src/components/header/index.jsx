@@ -7,7 +7,11 @@ const HeaderComponent = () => (
   <Header>
     <div className="flex items-center">
       <Logo src={logo} title="Logo Github" />
-      <HeaderSearch className="mr-4" type="text" name="search" placeholder='Search or jump to...'/>
+      <HeaderSearch
+        className="mr-4"
+        type="text"
+        name="search"
+        placeholder='Search or jump to...'/>
       <Nav>
         <a href="#">Pull Requests</a>
         <a href="#">Issues</a>
@@ -16,7 +20,10 @@ const HeaderComponent = () => (
       </Nav>
     </div>
     <div className="flex">
-      <Avatar src={avatar} title="User avatar" />
+      <Avatar
+        src={avatar}
+        title="User avatar"
+        alt="Avatar" />
     </div>
   </Header>
 )
