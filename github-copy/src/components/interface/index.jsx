@@ -6,9 +6,11 @@ import square from "./square.png";
 
 const InterfaceComponent = (props) => {
 
+  // When typing into searchbar...
   const onChangeHandler = (text) => {
     let matches = [];
 
+    // For at least 2 characters
     if (text.length > 1 ) {
       matches = props.repos.filter( repo => {
         const regex = new RegExp(`${text}`, "gi");
@@ -70,6 +72,8 @@ const InterfaceComponent = (props) => {
       </div>
       <ButtonNew>New</ButtonNew>
     </SearchBar>
+
+    {/* Iteraction over all results */}
     { props.results.length > 0 ? props.results.map((result, index) =>
       <Result key={index}>
           <div>
@@ -87,7 +91,7 @@ const InterfaceComponent = (props) => {
           </div>
           <div><Button>Star</Button></div>
       </Result>
-    ) : <p className="ml-2">Sorry! There is no results. </p>}
+    ) : <p className="ml-4">Sorry! There is no results. </p>}
   </Interface>
   )
 }

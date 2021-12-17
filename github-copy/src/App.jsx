@@ -16,10 +16,12 @@ const App = () => {
   useEffect( () => {
     const loadRepos = async () => {
       try {
+        // Fetching repositories from Github API
         const response = await axios.get('https://api.github.com/users/helios63/repos?per_page=100')
         setRepos(response.data)
         setResults(response.data)
       } catch {
+        // If API doesnt work
         console.log('It doesnt work')
       }
     }
